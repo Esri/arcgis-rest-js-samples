@@ -1,8 +1,8 @@
-  {
-    "imports": {
-      "@esri/arcgis-rest-form-data": "../../packages/arcgis-rest-form-data/browser-ponyfill.mjs",
-      "@esri/arcgis-rest-fetch": "../../packages/arcgis-rest-fetch/browser-ponyfill.mjs",
-      "@esri/arcgis-rest-request": "../../packages/arcgis-rest-request/dist/esm/index.js",
-      "@esri/arcgis-rest-portal": "../../packages/arcgis-rest-portal/dist/esm/index.js"
-    }
+{
+  "imports": {
+    "@esri/arcgis-rest-form-data": "https://esm.run/@esri/arcgis-rest-form-data/browser-ponyfill.mjs",
+    "@esri/arcgis-rest-fetch": "https://esm.run/@esri/arcgis-rest-fetch/browser-ponyfill.mjs",
+    "@esri/arcgis-rest-request": "https://esm.run/@esri/arcgis-rest-request/dist/esm/index.js",
+    "@esri/arcgis-rest-portal": "https://esm.run/@esri/arcgis-rest-portal/dist/esm/index.js"
   }
+}
