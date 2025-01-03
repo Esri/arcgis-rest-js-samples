@@ -2,9 +2,16 @@
 
 This demo shows how to use the `Job` class to submit a job and retrieve the results.
 
-## Setup
+## Running this demo
 
-1. First `npm run build` in the ArcGIS REST JS root folder to setup the dependencies.
-3. Job has a `submitJob()` function that takes url, params, and authentication parameters. The response from this method returns an instance of the `Job` class.
-4. To retrieve results, call `getAllResults()` in your `Job` instance which will check to see if the job is completed and returns the results if so.
-5. In the terminal, run `npm start`.
+For this sample, you do not need to install any dependencies - it uses ArcGIS REST JS from the Unpkg CDN. To run this sample, you just need to host the `index.html` file. There are a variety of ways to do that; one simple way is to use the [serve](https://www.npmjs.com/package/serve) package:
+
+```bash
+npx serve
+```
+
+### Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-browser), updating the script tags in these files as necessary:
+
+- `index.html`
