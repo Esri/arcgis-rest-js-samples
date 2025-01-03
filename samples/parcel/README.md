@@ -1,5 +1,7 @@
 # ArcGIS REST JS + Parcel
 
+## Running this demo
+
 1. Run `npm install` in this directory
 1. Run `npm start` to spin up the development server.
 1. Visit [http://localhost:1234](http://localhost:1234).
