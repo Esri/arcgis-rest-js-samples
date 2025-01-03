@@ -6,20 +6,20 @@ See the ArcGIS Rest JS guide to [Authentication in Browser-based Apps](https://d
 
 ## Running this demo
 
-1. Run `npm run build` in the root directory
-1. Run `npm start` in this directory to spin up the development server.
-1. Visit [http://localhost:8080](http://localhost:8080).
-
-The demo will run using an application configured by the ArcGIS REST JS team.
+1. Run `npx serve` in this directory to spin up the development server.
+1. Visit [http://localhost:3000](http://localhost:3000).
 
 ## Running with your own credentials
 
 1. Run `npm run build` in the root directory
 1. [Register an app](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/register-your-application/) and copy the Client ID into `config.js` in the `clientId` property.
-1. [Add redirect URIs](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/add-redirect-uri/) for `http://localhost:8080` (for inline redirects) and `http://localhost:8080/authentication.html` (for popup redirects) to your registered application.
-1. Run `npm start` in this directory to spin up the development server.
-1. Visit [http://localhost:8080](http://localhost:8080).
+1. [Add redirect URIs](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/add-redirect-uri/) for `http://localhost:3000` (for inline redirects) and `http://localhost:3000/authentication.html` (for popup redirects) to your registered application.
+1. Run `npx serve` in this directory to spin up the development server.
+1. Visit [http://localhost:3000](http://localhost:3000).
 
----
+### Local ArcGIS REST JS
 
-**Note:** The server starts with a special configuration to serve URLs starting with `@esri/arcgis-rest-*` from their respective packages. In your application you will need to change these URLs to point to their respective locations.
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-browser), updating the script tags in these files as necessary:
+
+- `index.html`
+- `authenticate.html`

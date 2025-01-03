@@ -5,6 +5,6 @@ once you have a clientid of your own, copy/paste it here and rename this file 'c
 */
 const config = {
   clientId: "3CiiHWyTNMIRNyF1",
-  popupRedirectUri: "http://localhost:8080/authenticate.html",
-  inlineRedirectUri: "http://localhost:8080/"
+  popupRedirectUri: "http://localhost:3000/authenticate.html",
+  inlineRedirectUri: "http://localhost:3000/"
 };

@@ -2,7 +2,8 @@
 
 ## Running this demo
 
-First run `npm install` to install the dependencies.
+1. Run `npm install` to install the dependencies.
+2. Run `npm start` to make a require and log output.
 
 ### Local ArcGIS REST JS
 
@@ -10,7 +11,3 @@ If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the
 
 - `arcgis-rest-request`
 - `arcgis-rest-feature-service`
-
-### Other Steps
-
-Run `npm start` to make a require and log output.
