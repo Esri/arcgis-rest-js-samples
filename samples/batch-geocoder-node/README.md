@@ -1,6 +1,18 @@
-# Running this demo
+# Batch Geocoder (Node)
 
-1. Make sure you run `npm run build` in the root folder to setup the dependencies
+## Running this demo
+
+First run `npm install` to install the dependencies.
+
+### Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js), referencing these packages that this sample uses as necessary:
+
+- `arcgis-rest-request`
+- `arcgis-rest-geocoding`
+
+### Other Steps
+
 2. Create and register a [new application](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/accessing-arcgis-online-services/).
 3. Replace values in [config-template.js](/demos/batch-geocoder-node/config-template.js) and rename to `config.js`
    1. `"clientId"`: ArcGIS ClientId
