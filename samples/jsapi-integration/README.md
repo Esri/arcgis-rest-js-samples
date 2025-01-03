@@ -2,7 +2,7 @@
 
 This demo shows how to use `arcgis-rest-js` with the ArcGIS API for JavaScript. A typical use case would be when you need to query items or feature data _before_ you are ready to display a map or scene view. In this scenario, you should load the light-weight `arcgis-rest-js` libraries first and use them to perform your queries and/or authenticate with the ArcGIS platform. Then when you are ready to show a map or scene view, you would lazy-load the ArcGIS API for JavaScript with something like [esri-loader](https://github.com/Esri/esri-loader) and use it to create the map.
 
-## Running this demo
+## Running this sample
 
 For this sample, you do not need to install any dependencies - it uses ArcGIS REST JS from the Unpkg CDN. To run this sample, you just need to host the `index.html` file. There are a variety of ways to do that; one simple way is to use the [serve](https://www.npmjs.com/package/serve) package:
 

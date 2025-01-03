@@ -1,6 +1,6 @@
 # Batch Geocoder (Node)
 
-## Running this demo
+## Running this sample
 
 1. run `npm install` to install the dependencies.
 2. Create and register a [new application](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/accessing-arcgis-online-services/).

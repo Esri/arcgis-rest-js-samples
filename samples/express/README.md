@@ -2,7 +2,7 @@
 
 This sample shows how to trigger OAuth 2.0 via custom server-side code.
 
-## Running this demo
+## Running this sample
 
 1. In this sample's directory, run `npm install` to install the dependencies.
 2. Create a new application on <https://developers.arcgis.com> (New Item > Developer Credentials > OAuth 2.0 credentials).

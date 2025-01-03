@@ -1,6 +1,6 @@
 # Common JS Modules in Node.js
 
-## Running this demo
+## Running this sample
 
 1. Run `npm install` to install the dependencies.
 2. Run `npm start` to make a require and log output

@@ -2,7 +2,7 @@
 
 Demonstrates using ReadableStream to save results from a query to a file. Features from <https://services.arcgis.com/uUvqNMGPm7axC2dD/arcgis/rest/services/Boating_Access_Sites/FeatureServer/0> will be written in GeoJSON format to a file in the `output` directory.
 
-## Running this demo
+## Running this sample
 
 1. Run `npm install` to install the dependencies.
 1. Run `npm start`.

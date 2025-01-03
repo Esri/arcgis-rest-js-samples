@@ -1,6 +1,6 @@
 # ArcGIS REST JS + Deno
 
-## Running this demo
+## Running this sample
 
 ArcGIS REST JS is fully compatible with Deno. You can run this demo with:
 

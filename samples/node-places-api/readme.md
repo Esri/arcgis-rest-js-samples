@@ -2,7 +2,7 @@
 
 A basic demo of the Places API.
 
-## Running this demo
+## Running this sample
 
 1. Copy `.env.template` to `.env` and add your own API key which has the places API scope enabled.
 2. Run `npm install` to install the dependencies.

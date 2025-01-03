@@ -1,6 +1,6 @@
 # ArcGIS REST JS + Parcel
 
-## Running this demo
+## Running this sample
 
 1. Create an API key (<https://developers.arcgis.com>).
 1. Copy `auth.template.js` to `auth.js`, and place your API key into that file.

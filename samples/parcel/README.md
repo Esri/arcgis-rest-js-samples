@@ -1,6 +1,6 @@
 # ArcGIS REST JS + Parcel
 
-## Running this demo
+## Running this sample
 
 1. Run `npm install` in this directory
 1. Run `npm start` to spin up the development server.

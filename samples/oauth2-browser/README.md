@@ -4,7 +4,7 @@ This demo uses Vanilla JS to implement OAuth2 using the `arcgis-rest-js` librari
 
 See the ArcGIS Rest JS guide to [Authentication in Browser-based Apps](https://developers.arcgis.com/arcgis-rest-js/authentication/tutorials/implement-user-authentication-rest-js-browser/) for more info.
 
-## Running this demo
+## Running this sample
 
 1. Run `npx serve` in this directory to spin up the development server.
 1. Visit [http://localhost:3000](http://localhost:3000).

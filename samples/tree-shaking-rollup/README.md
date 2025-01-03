@@ -2,7 +2,7 @@
 
 This demo shows how to have rollup [tree shake](https://rollupjs.org/guide/en#tree-shaking) `@esri/rest-js` and only include methods that are actually being called in its output bundle.
 
-## Running this demo
+## Running this sample
 
 1. Run `npm install` to install the dependencies.
 1. Run `npm run build:app`.

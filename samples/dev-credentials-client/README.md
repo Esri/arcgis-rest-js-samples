@@ -6,7 +6,7 @@ via [Authenticate with an ArcGIS identity](https://developers.arcgis.com/arcgis-
 Then you can use the form to create an API key or switch to the OAuth 2.0 form to create an OAuth 2.0 app.
 Once you've created an API key or OAuth 2.0 app, you can click on the item in the table below the form to edit it.
 
-## Running this demo
+## Running this sample
 
 First run `npm install` to install the dependencies.
 
