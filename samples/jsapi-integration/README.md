@@ -4,9 +4,20 @@ This demo shows how to use `arcgis-rest-js` with the ArcGIS API for JavaScript. 
 
 ## Running this demo
 
-1. Run `npm run build` in the repository's root directory.
-1. Run `npm start` to spin up the development server.
-1. Visit [http://localhost:8080](http://localhost:8080).
+For this sample, you do not need to install any dependencies - it uses ArcGIS REST JS from the Unpkg CDN. To run this sample, you just need to host the `index.html` file. There are a variety of ways to do that; one simple way is to use the [serve](https://www.npmjs.com/package/serve) package:
+
+```bash
+npx serve
+```
+
+### Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-browser), updating the script tags in these files as necessary:
+
+- `index.html`
+- `authenticate.html`
+
+## Notable code
 
 ```js
 // from rest-js
@@ -25,5 +36,3 @@ esriId.getCredential("https://www.arcgis.com/sharing/rest").then((cred) => {
   const session = ArcGISIdentityManager.fromCredential(cred, serverInfo);
 });
 ```
-
-**Note:** The server starts with a special configuration to serve URLs starting with `@esri/arcgis-rest-*` from their respective packages. In your application you will need to change these URLs to point to their respective locations.
