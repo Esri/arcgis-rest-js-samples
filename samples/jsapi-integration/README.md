@@ -4,11 +4,11 @@ This demo shows how to use `arcgis-rest-js` with the ArcGIS API for JavaScript. 
 
 ## Running this sample
 
-For this sample, you do not need to install any dependencies - it uses ArcGIS REST JS from the Unpkg CDN. To run this sample, you just need to host the `index.html` file. There are a variety of ways to do that; one simple way is to use the [serve](https://www.npmjs.com/package/serve) package:
-
-```bash
-npx serve
-```
+1. [Register an app](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/register-your-application/) and copy the Client ID.
+1. [Add redirect URIs](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/add-redirect-uri/) for `http://localhost:3000`.
+1. Copy `config.template.ts` to `config.ts` and replace the `clientId` with the Client ID from step 1.
+1. Run `npx serve` in this directory to spin up the development server.
+1. Visit [http://localhost:3000](http://localhost:3000).
 
 ### Local ArcGIS REST JS
 

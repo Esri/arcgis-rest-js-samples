@@ -6,14 +6,9 @@ See the ArcGIS Rest JS guide to [Authentication in Browser-based Apps](https://d
 
 ## Running this sample
 
-1. Run `npx serve` in this directory to spin up the development server.
-1. Visit [http://localhost:3000](http://localhost:3000).
-
-## Running with your own credentials
-
-1. Run `npm run build` in the root directory
-1. [Register an app](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/register-your-application/) and copy the Client ID into `config.js` in the `clientId` property.
+1. [Register an app](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/register-your-application/) and copy the Client ID.
 1. [Add redirect URIs](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/add-redirect-uri/) for `http://localhost:3000` (for inline redirects) and `http://localhost:3000/authentication.html` (for popup redirects) to your registered application.
+1. Copy `config.template.ts` to `config.ts` and replace the `clientId` with the Client ID from step 1.
 1. Run `npx serve` in this directory to spin up the development server.
 1. Visit [http://localhost:3000](http://localhost:3000).
 
