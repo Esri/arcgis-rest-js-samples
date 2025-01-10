@@ -21,22 +21,28 @@ Using long lived sessions on the server also means that the server can perform b
 
 These instructions are for setting up the demo using credentials setup by the ArcGIS REST JS team.
 
-1. Make sure you run `npm run build` in the root folder to setup the dependencies
+1. In this sample's directory, run `npm install` to install the dependencies.
 1. Copy `.env.template` to `.env`
 1. Run `npm run start`
-1. Visit http://localhost:3000 to start.
+1. Visit <http://localhost:3000> to start.
 
 ## Setup with your own credentials
 
 These instructions are for setting up the demo using credentials setup by the ArcGIS REST JS team.
 
-1. Make sure you run `npm run build` in the root folder to setup the dependencies
+1. In this sample's directory, run `npm install` to install the dependencies.
 1. Copy `.env.template` to `.env`
 1. [Register an app](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/register-your-application/) and copy the Client ID into `.env` in the `CLIENT_ID` property.
 1. [Add redirect URIs](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/add-redirect-uri/) for `http://localhost:3000/authenticate` to your registered application.
-1. Replace the `ENCRYPTION_KEY` and `SESSION_SECRET` values with new values. You can use a website like https://randomkeygen.com/ to generate new strong keys.
+1. Replace the `ENCRYPTION_KEY` and `SESSION_SECRET` values with new values. You can use a website like <https://randomkeygen.com/> to generate new strong keys.
 1. Run `npm run start`
-1. Visit http://localhost:3000 to start.
+1. Visit <http://localhost:3000> to start.
+
+## Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-npm), referencing these packages that this sample uses as necessary:
+
+- `arcgis-rest-request`
 
 ## How it works
 

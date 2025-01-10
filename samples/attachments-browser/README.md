@@ -1,7 +1,15 @@
-# Running this demo
+# Attachments Browser
 
-1. Make sure you run `npm run build` in the root folder to setup the dependencies
-1. `npm start`
-1. Visit http://localhost:8080
+## Running this sample
 
-**Note:** The server starts with a special configuration to serve URLs starting with `@esri/arcgis-rest-*` from their respective packages. In your application you will need to change these URLs to point to their respective locations.
+For this sample, you do not need to install any dependencies - it uses ArcGIS REST JS from the Unpkg CDN. To run this sample, you just need to host the `index.html` file. There are a variety of ways to do that; one simple way is to use the [serve](https://www.npmjs.com/package/serve) package:
+
+```bash
+npx serve
+```
+
+### Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-browser), updating the script tags in these files as necessary:
+
+- `index.html`

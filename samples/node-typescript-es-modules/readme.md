@@ -38,3 +38,10 @@ The actual example just runs a query for "water" against public items in ArcGIS 
 **Note** this project uses [volta](https://volta.sh) to ensure consistent node & npm versions across platforms.
 
 If not using volta, please ensure you are using node >= 16.13.1 and npm >= 8.5.3
+
+## Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-npm), referencing these packages that this sample uses as necessary:
+
+- `arcgis-rest-request`
+- `arcgis-rest-portal`

@@ -18,5 +18,5 @@ import { findPlacesNearPoint } from "@esri/arcgis-rest-places";
     allPlaces = allPlaces.concat(lastResponse.results);
   }
 
-  console.log(allPlaces.length);
+  console.log(allPlaces.length, allPlaces);
 })();

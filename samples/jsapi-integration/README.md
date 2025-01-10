@@ -2,11 +2,22 @@
 
 This demo shows how to use `arcgis-rest-js` with the ArcGIS API for JavaScript. A typical use case would be when you need to query items or feature data _before_ you are ready to display a map or scene view. In this scenario, you should load the light-weight `arcgis-rest-js` libraries first and use them to perform your queries and/or authenticate with the ArcGIS platform. Then when you are ready to show a map or scene view, you would lazy-load the ArcGIS API for JavaScript with something like [esri-loader](https://github.com/Esri/esri-loader) and use it to create the map.
 
-## Running this demo
+## Running this sample
 
-1. Run `npm run build` in the repository's root directory.
-1. Run `npm start` to spin up the development server.
-1. Visit [http://localhost:8080](http://localhost:8080).
+1. [Register an app](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/register-your-application/) and copy the Client ID.
+1. [Add redirect URIs](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/tutorials/add-redirect-uri/) for `http://localhost:3000`.
+1. Copy `config.template.ts` to `config.ts` and replace the `clientId` with the Client ID from step 1.
+1. Run `npx serve` in this directory to spin up the development server.
+1. Visit [http://localhost:3000](http://localhost:3000).
+
+### Local ArcGIS REST JS
+
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-browser), updating the script tags in these files as necessary:
+
+- `index.html`
+- `authenticate.html`
+
+## Notable code
 
 ```js
 // from rest-js
@@ -25,5 +36,3 @@ esriId.getCredential("https://www.arcgis.com/sharing/rest").then((cred) => {
   const session = ArcGISIdentityManager.fromCredential(cred, serverInfo);
 });
 ```
-
-**Note:** The server starts with a special configuration to serve URLs starting with `@esri/arcgis-rest-*` from their respective packages. In your application you will need to change these URLs to point to their respective locations.
