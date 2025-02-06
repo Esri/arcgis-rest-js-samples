@@ -18,7 +18,8 @@ import {
   findPlacesWithinExtent,
   getPlaceDetails,
   getCategories,
-  getCategory
+  getCategory,
+  IconOptions,
 } from "@esri/arcgis-rest-places";
 import * as dotenv from "dotenv";
 import fs from "fs";
@@ -31,7 +32,8 @@ let lastResponse = await findPlacesNearPoint({
   x: -3.1883,
   y: 55.9533,
   radius: 100,
-  authentication
+  icon: IconOptions.PNG,
+  authentication,
 });
 
 fs.promises.writeFile(
@@ -54,7 +56,8 @@ const extentResults = await findPlacesWithinExtent({
   xmax: -117.995753,
   ymax: 33.833337,
   categoryIds: ["13002"],
-  authentication
+  icon: IconOptions.CIM,
+  authentication,
 });
 
 fs.promises.writeFile(
@@ -65,7 +68,8 @@ fs.promises.writeFile(
 const placeResult = await getPlaceDetails({
   placeId: extentResults.results[0].placeId,
   requestedFields: ["all"],
-  authentication
+  icon: IconOptions.SVG,
+  authentication,
 });
 
 fs.promises.writeFile(
@@ -81,7 +85,7 @@ if (placeResult.placeDetails.categories) {
       ({ categoryId }: { categoryId: string }) => {
         return getCategory({
           categoryId,
-          authentication
+          authentication,
         });
       }
     )
@@ -97,7 +101,10 @@ if (placeResult.placeDetails.categories) {
   );
 }
 
-const { categories } = await getCategories({ authentication });
+const { categories } = await getCategories({
+  authentication,
+  icon: IconOptions.PNG,
+});
 
 console.log("Found categories: ", categories.length);
 
@@ -107,7 +114,8 @@ fs.promises.writeFile(
 );
 const categoryMock = await getCategory({
   categoryId: "10000",
-  authentication
+  icon: IconOptions.CIM,
+  authentication,
 });
 
 fs.promises.writeFile(
@@ -117,7 +125,7 @@ fs.promises.writeFile(
 
 const searchCategoriesMock = await getCategories({
   filter: "Tea",
-  authentication
+  authentication,
 });
 fs.promises.writeFile(
   "./searchCategories.mock.json",
@@ -126,7 +134,7 @@ fs.promises.writeFile(
 
 const categoryResults = await getCategories({
   filter: "Tea",
-  authentication
+  authentication,
 });
 
 console.log(`Categories matching "Tea":`, categoryResults.categories.length);
@@ -137,7 +145,7 @@ try {
     y: 55.9533,
     categoryIds: ["13002"],
     offset: 300,
-    authentication
+    authentication,
   });
 } catch (e: any) {
   if (
@@ -154,7 +162,7 @@ const searchTextResults = await findPlacesWithinExtent({
   xmax: -117.995753,
   ymax: 33.833337,
   searchText: "coffee",
-  authentication
+  authentication,
 });
 
 fs.promises.writeFile(

@@ -3,7 +3,7 @@
   "name": "node-places-api",
   "version": "1.0.0",
   "description": "",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [],
   "type": "module",
   "main": "index.js",
