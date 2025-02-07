@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "node-elevation-api",
+  "version": "1.0.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "keywords": [],
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --loader ts-node/esm index.ts"
+  },
+  "dependencies": {
+    "@esri/arcgis-rest-elevation": "^1.0.0-beta.1",
+    "@esri/arcgis-rest-request": "^4.0.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "author": "Sheryl Tania",
+  "volta": {
+    "node": "16.14.0",
+    "npm": "8.5.3"
+  }
+}
