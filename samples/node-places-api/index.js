@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import { ApiKeyManager } from "@esri/arcgis-rest-request";
-import { getCategories } from "@esri/arcgis-rest-places";
+import { getCategories, IconOptions } from "@esri/arcgis-rest-places";
 import * as dotenv from "dotenv";
 import fs from "fs";
 import find from "unist-util-find";
@@ -28,8 +28,10 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 const authentication = ApiKeyManager.fromKey(process.env.API_KEY);
 
 const { categories } = await getCategories({
-  endpoint: "https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/categories",
-  authentication
+  endpoint:
+    "https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/categories",
+  icon: IconOptions.PNG,
+  authentication,
 });
 
 console.log("Found categories: ", categories.length);
@@ -48,9 +50,10 @@ const tree = {
       type: "category",
       id: c.categoryId,
       fullLabel: c.fullLabel || [],
-      children: []
+      icon: c.icon,
+      children: [],
     };
-  })
+  }),
 };
 
 childCategories.reduce((tree, child) => {
@@ -64,13 +67,14 @@ childCategories.reduce((tree, child) => {
     type: "category",
     id: child.categoryId,
     fullLabel: child.fullLabel || [],
-    children: []
+    icon: child.icon,
+    children: [],
   });
   return tree;
 }, tree);
 
 const labels = [
-  ["id", "fullLabel", "depth", "direct children", "all children"]
+  ["id", "fullLabel", "depth", "direct children", "all children"],
 ];
 
 visit(tree, (node) => {
@@ -84,7 +88,7 @@ visit(tree, (node) => {
       node.fullLabel.join(" > "),
       node.fullLabel.length,
       node.children.length,
-      childCount
+      childCount,
     ]);
   }
 });
