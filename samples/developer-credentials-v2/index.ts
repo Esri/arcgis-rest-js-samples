@@ -5,10 +5,11 @@ import {
 } from "@esri/arcgis-rest-developer-credentials";
 import { ArcGISIdentityManager } from "@esri/arcgis-rest-request";
 import { removeItem } from "@esri/arcgis-rest-portal";
+import "dotenv/config";
 
 const authentication = await ArcGISIdentityManager.signIn({
-  username: "patrickarlt.devext.247",
-  password: "patrickarlt.devext.2471a",
+  username: (process.env as any).ARCGIS_USERNAME,
+  password: (process.env as any).ARCGIS_PASSWORD,
   portal: "https://devext.arcgis.com/sharing/rest",
 });
 

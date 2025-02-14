@@ -13,7 +13,8 @@
   "dependencies": {
     "@esri/arcgis-rest-developer-credentials": "latest",
     "@esri/arcgis-rest-portal": "^4.0.0",
-    "@esri/arcgis-rest-request": "^4.0.0"
+    "@esri/arcgis-rest-request": "^4.0.0",
+    "dotenv": "^16.4.7"
   },
   "devDependencies": {
     "ts-node": "^10.7.0",
