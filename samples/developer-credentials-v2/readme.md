@@ -1,40 +1,17 @@
-# Scripting using ArcGIS Rest JS with Typescript and Node
+# Developer Credential Package Sample
 
-ArcGIS Rest.js is really useful for automating various actions in an organization. However, getting typescript + node + ts-node + arcgis-rest-js working smoothly requires some specific settings, so this repo shows an example of a working configuration.
+This sample shows how to use the `arcgis-rest-developer-credentials` package.
 
-## Install & Run
+## Running this sample
 
-`npm i && npm start`
+1. Copy `.env.template` to `.env` and add your own username and password.
+2. Run `npm install` to install the dependencies.
+3. Run `npm start`.
 
-You can also run specific files at the command line with `npm ts-node filename.ts`
+### Local ArcGIS REST JS
 
-## Configuration
+If you'd like to use a local version of ArcGIS REST JS, follow the [steps in the parent README](../README.md#local-arcgis-rest-js-npm), referencing these packages that this sample uses as necessary:
 
-In `package.json` the `type` field must be set to `module`.
+- `arcgis-rest-request`
+- `arcgis-rest-developer-credentials`
 
-In `tsconfig.json` the `module` option must be set to `esnext`
-
-If you want to use `await` directly in the script, you also need to set the `target` to `es2017` or greater.
-
-Optionally, you can also add a `.ts-node` section to `tsconfig.json` and specify that it should use `esm` by default.
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "module": "esnext"
-    ...
-  },
-  "ts-node": {
-    "esm": true
-  }
-}
-```
-
-If you don't do this, you will need to run your script using the `--esm` flag (i.e. `ts-node --esm index.ts`)
-
-The actual example just runs a query for "water" against public items in ArcGIS Online - but you cna do
-
-**Note** this project uses [volta](https://volta.sh) to ensure consistent node & npm versions across platforms.
-
-If not using volta, please ensure you are using node >= 16.13.1 and npm >= 8.5.3
