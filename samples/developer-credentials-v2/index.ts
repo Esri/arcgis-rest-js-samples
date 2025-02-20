@@ -10,7 +10,7 @@ import "dotenv/config";
 const authentication = await ArcGISIdentityManager.signIn({
   username: (process.env as any).ARCGIS_USERNAME,
   password: (process.env as any).ARCGIS_PASSWORD,
-  portal: "https://devext.arcgis.com/sharing/rest",
+  portal: "https://arcgis.com/sharing/rest",
 });
 
 const created = await createApiKey({
